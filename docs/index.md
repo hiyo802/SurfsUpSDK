@@ -1,5 +1,5 @@
 ---
-title: "Surfs🌊Up SDK"
+title: "Overview"
 ---
 
 # SurfsUp SDK Overview
@@ -11,7 +11,9 @@ This is the documentation site for creating custom levels in [SurfsUp](https://s
 * [Using the Ramp Prefabs](prefabs.md)
 * Texturing Ramps
 * Zoning
+* Changing the Environment
 * Exporting
+* Testing in Game
 * Using Hammer VMF files with Godot
 * Using SURGE/Blender to create ramps
 * Decompiling and porting BSP files

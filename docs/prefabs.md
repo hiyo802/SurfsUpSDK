@@ -1,5 +1,5 @@
 ---
-title: "Using the Ramp Prefabs"
+title: "Ramp Prefabs"
 permalink: /prefabs/
 ---
 
