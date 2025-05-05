@@ -1,10 +1,5 @@
-defaults:
-  - scope:
-	  path: "Assets/Images"
-	values:
-	  image: true
 title: SurfsUp🌊SDK
-logo: /Assets/Images/sdk_logo.png
+logo: /assets/img/sdk_logo.png
 description: Map making documentation for SurfsUp
 show_downloads: false
 remote_theme: pages-themes/minimal@v0.2.0
