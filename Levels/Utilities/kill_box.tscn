@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgymwi8dogwyp"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_wok3y"]
+margin = 4.0
+
+[node name="KillBox" type="Area3D"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("WorldBoundaryShape3D_wok3y")
+debug_color = Color(1, 0.0745098, 0, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

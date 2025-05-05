@@ -18,3 +18,11 @@ config/icon="uid://bmty5wyuugvol"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/sky_3d/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Levels/": "orange",
+"res://Shaders/": "teal"
+}

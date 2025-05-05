@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ro7t2na6loyk"]
+
+[ext_resource type="Texture2D" uid="uid://bitaifua842gc" path="res://Assets/Textures/DampSand/damp_sand_ao_1k.jpg" id="1_12s85"]
+[ext_resource type="Texture2D" uid="uid://dkuipvkjsth15" path="res://Assets/Textures/DampSand/damp_sand_nor_gl_1k.jpg" id="2_kbwng"]
+[ext_resource type="Texture2D" uid="uid://bwt6gphuu3sg3" path="res://Assets/Textures/DampSand/damp_sand_rough_1k.jpg" id="3_flm83"]
+
+[resource]
+albedo_color = Color(1, 0.752373, 0.396321, 1)
+roughness_texture = ExtResource("3_flm83")
+normal_enabled = true
+normal_texture = ExtResource("2_kbwng")
+ao_enabled = true
+ao_texture = ExtResource("1_12s85")
+uv1_scale = Vector3(0.25, 0.25, 0.25)

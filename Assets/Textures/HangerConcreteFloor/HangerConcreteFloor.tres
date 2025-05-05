@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://ee638xjm5x6s"]
+
+[ext_resource type="Texture2D" uid="uid://c5xmarlaou2iu" path="res://Assets/Textures/HangerConcreteFloor/hangar_concrete_floor_diff_1k.jpg" id="1_bt85u"]
+[ext_resource type="Texture2D" uid="uid://b4rb3rjq5c8sh" path="res://Assets/Textures/HangerConcreteFloor/hangar_concrete_floor_ao_1k.jpg" id="2_dwk6v"]
+[ext_resource type="Texture2D" uid="uid://dkfimb38rhlhw" path="res://Assets/Textures/HangerConcreteFloor/hangar_concrete_floor_nor_gl_1k.jpg" id="3_i05vd"]
+[ext_resource type="Texture2D" uid="uid://cm5pjb4ksjf5d" path="res://Assets/Textures/HangerConcreteFloor/hangar_concrete_floor_disp_1k.jpg" id="4_bv6bb"]
+
+[resource]
+albedo_texture = ExtResource("1_bt85u")
+roughness_texture = ExtResource("4_bv6bb")
+normal_enabled = true
+normal_texture = ExtResource("3_i05vd")
+ao_enabled = true
+ao_texture = ExtResource("2_dwk6v")

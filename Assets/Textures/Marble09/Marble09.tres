@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://drllp0o8irbkm"]
+
+[ext_resource type="Texture2D" uid="uid://jkbdj7lu81jh" path="res://Assets/Textures/Marble09/Marble009_1K-JPG_Color.jpg" id="1_qk58h"]
+[ext_resource type="Texture2D" uid="uid://ckq7e177x0ynn" path="res://Assets/Textures/Marble09/Marble009_1K-JPG_NormalGL.jpg" id="2_xf00l"]
+[ext_resource type="Texture2D" uid="uid://dafirja7vd4rx" path="res://Assets/Textures/Marble09/Marble009_1K-JPG_Roughness.jpg" id="3_ung3h"]
+
+[resource]
+albedo_texture = ExtResource("1_qk58h")
+roughness_texture = ExtResource("3_ung3h")
+emission = Color(0.123473, 0.123473, 0.123473, 1)
+normal_enabled = true
+normal_texture = ExtResource("2_xf00l")
+uv1_scale = Vector3(0.45, 0.45, 0.45)

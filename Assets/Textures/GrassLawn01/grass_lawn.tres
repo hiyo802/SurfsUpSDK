@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cgadv0bp7771e"]
+
+[ext_resource type="Texture2D" uid="uid://diuyeq5hu4sis" path="res://Assets/Textures/GrassLawn01/PX_Grass_Lawn_01_albedo.jpg" id="1_8p7n0"]
+[ext_resource type="Texture2D" uid="uid://ddipy5gu8lyyh" path="res://Assets/Textures/GrassLawn01/PX_Grass_Lawn_01_ao.jpg" id="2_irk4t"]
+
+[resource]
+albedo_texture = ExtResource("1_8p7n0")
+ao_enabled = true
+ao_texture = ExtResource("2_irk4t")

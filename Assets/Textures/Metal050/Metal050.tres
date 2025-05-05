@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://do4ggbelk28nr"]
+
+[ext_resource type="Texture2D" uid="uid://c8wfetmf734ja" path="res://Assets/UI/HEAT/Filters/Dusk.png" id="1_h3pss"]
+[ext_resource type="Texture2D" uid="uid://dmnq517mttt6v" path="res://Assets/Textures/Metal050/Metal050A_1K-JPG_Metalness.jpg" id="2_28uqf"]
+[ext_resource type="Texture2D" uid="uid://c86bhkpd3rlds" path="res://Assets/Textures/Metal050/Metal050A_1K-JPG_NormalGL.jpg" id="3_bqt7u"]
+[ext_resource type="Texture2D" uid="uid://d0qi54yn7gn6g" path="res://Assets/Textures/Metal050/Metal050A_1K-JPG_Roughness.jpg" id="4_2qjk8"]
+
+[resource]
+albedo_texture = ExtResource("1_h3pss")
+metallic = 0.88
+metallic_texture = ExtResource("2_28uqf")
+roughness_texture = ExtResource("4_2qjk8")
+normal_enabled = true
+normal_texture = ExtResource("3_bqt7u")
+ao_enabled = true
+ao_light_affect = 1.0
+backlight_enabled = true
+backlight = Color(0.23778, 0.23778, 0.23778, 1)

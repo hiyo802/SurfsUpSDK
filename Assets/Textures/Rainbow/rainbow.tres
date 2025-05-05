@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ec2ttghb2qlk"]
+
+[ext_resource type="Texture2D" uid="uid://cnqcw00xt3r72" path="res://Assets/Textures/Rainbow/Rainbow Gradient saturated.png" id="1_uhsni"]
+
+[resource]
+transparency = 1
+blend_mode = 1
+albedo_texture = ExtResource("1_uhsni")
+ao_enabled = true
+ao_light_affect = 1.0
+backlight_enabled = true
+backlight = Color(0.23778, 0.23778, 0.23778, 1)

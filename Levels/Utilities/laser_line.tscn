@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://qanfvdxxfyt2"]
+
+[ext_resource type="Shader" uid="uid://b3qkrkuxqljao" path="res://Shaders/lineshader.gdshader" id="1_w00dw"]
+
+[sub_resource type="Gradient" id="Gradient_e56xb"]
+colors = PackedColorArray(1, 1, 1, 0.784314, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_x1elh"]
+gradient = SubResource("Gradient_e56xb")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kfa16"]
+render_priority = 0
+shader = ExtResource("1_w00dw")
+shader_parameter/albedo = SubResource("GradientTexture2D_x1elh")
+shader_parameter/line_width = 1.0
+shader_parameter/line_length = 1.0
+shader_parameter/correct_uv = true
+shader_parameter/uv_offset_animation = Vector2(0, 1)
+shader_parameter/default_axis = Vector3(0, 1, 0)
+shader_parameter/color = Color(0.0859693, 0.662913, 0.709819, 1)
+shader_parameter/brightness = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_l4g7m"]
+size = Vector2(1, 1000)
+
+[node name="LaserLine" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, -1.77833e-15, 0, 1.77453e-15, 1, 0, 0, 0)
+material_override = SubResource("ShaderMaterial_kfa16")
+mesh = SubResource("QuadMesh_l4g7m")

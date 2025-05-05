@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dbx0lacijethn"]
+
+[ext_resource type="Texture2D" uid="uid://cong87tosqvql" path="res://Assets/Textures/Sand008/Sand_008_ambientOcclusion.png" id="2_a0j3l"]
+[ext_resource type="Texture2D" uid="uid://dqhxc720xsixf" path="res://Assets/Textures/Sand008/Sand_008_normal.png" id="3_olnl8"]
+[ext_resource type="Texture2D" uid="uid://c327n4mg54b6l" path="res://Assets/Textures/Sand008/Sand_008_roughness.png" id="4_reb8v"]
+
+[resource]
+albedo_color = Color(0.651194, 0.549096, 0.372244, 1)
+roughness_texture = ExtResource("4_reb8v")
+normal_enabled = true
+normal_texture = ExtResource("3_olnl8")
+ao_enabled = true
+ao_texture = ExtResource("2_a0j3l")

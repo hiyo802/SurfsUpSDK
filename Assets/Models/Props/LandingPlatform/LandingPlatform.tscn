@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhs1yp481t8dg"]
+
+[ext_resource type="PackedScene" uid="uid://cndltk3ceiib5" path="res://Assets/Models/Props/LandingPlatform/LandingPlatform.blend" id="1_gt11r"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="LandingPlatform3" parent="." instance=ExtResource("1_gt11r")]
