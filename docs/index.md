@@ -4,12 +4,18 @@ This is the documentation site for creating custom levels in [SurfsUp](https://s
 
 ## Topics
 * [Getting Started](#getting_started)
+* Using Ramp Prefabs
+* Texturing Ramps
+* Zoning
+* Exporting
+* Importing BSP's from Hammer
+* Using SURGE/Blender to create ramps
 
 ## <a name="getting_started"></a>Getting Started
 * Download, Fork, or Git Clone the [SurfsUpSDK Project](https://github.com/bearlikelion/SurfsUpSDK)
 * Download [Godot v4.4.1](https://godotengine.org/download/archive/4.4.1-stable/)
 * Open the `projet.godot` file
-* Duplicate (ctrl+d) _TemplateLevel.tscn and name it something new
+* Rename `test_level.tscn` to your map's name
 
 Export project as PCK to the `/Maps` directory next to the SurfsUp executable
 Use the in-game console (tilde) to load your map: `map <pck_name>`
