@@ -1,3 +1,19 @@
-# SurfsUp SDK
+# SurfsUp SDK Overview
 
-TODO: Write Documentation
+This is the documentation site for creating custom levels in [SurfsUp](https://store.steampowered.com/app/3454830/SurfsUp/)
+
+## Topics
+* [Getting Started](#getting_started)
+
+## <a name="getting_started"></a>Getting Started
+* Download, Fork, or Git Clone the [SurfsUpSDK Project](https://github.com/bearlikelion/SurfsUpSDK)
+* Download [Godot v4.4.1](https://godotengine.org/download/archive/4.4.1-stable/)
+* Open the `projet.godot` file
+* Duplicate (ctrl+d) _TemplateLevel.tscn and name it something new
+
+Export project as PCK, use in-game console (tilde) to open use:
+	`map <pck_name>`
+
+The Exported PCK Name and /Levels/scene_name **must match** to load properly
+
+TODO: Write documentation
