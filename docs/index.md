@@ -4,12 +4,13 @@ This is the documentation site for creating custom levels in [SurfsUp](https://s
 
 ## Topics
 * [Getting Started](#getting_started)
-* Using Ramp Prefabs
+* [Using the Ramp Prefabs](/prefabs)
 * Texturing Ramps
 * Zoning
 * Exporting
-* Importing BSP's from Hammer
+* Using Hammer VMF files with Godot
 * Using SURGE/Blender to create ramps
+* Decompiling and porting BSP files
 
 ## <a name="getting_started"></a>Getting Started
 * Download, Fork, or Git Clone the [SurfsUpSDK Project](https://github.com/bearlikelion/SurfsUpSDK)
