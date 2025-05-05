@@ -1,6 +1,6 @@
-title: SurfsUp🌊SDK Documentation
+title: SurfsUp🌊SDK
 logo: /Assets/sdk_logo.png
-description: Custom map making documentation for the video game SurfsUp
+description: Map making documentation for SurfsUp
 show_downloads: false
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
