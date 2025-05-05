@@ -14,7 +14,7 @@ config/name="Surfsup SDK"
 config/description="SurfsUp Map Making SDK"
 config/quit_on_go_back=false
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="uid://bmty5wyuugvol"
+config/icon="uid://ysqanrf6aw6x"
 
 [editor_plugins]
 
