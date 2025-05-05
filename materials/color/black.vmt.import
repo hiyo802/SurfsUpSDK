@@ -1,0 +1,14 @@
+[remap]
+
+importer="VMT"
+type="Material"
+uid="uid://bwc7mbludslan"
+path="res://.godot/imported/black.vmt-d103e543fc727e58b02c96e805a15916.vmt.tres"
+
+[deps]
+
+source_file="res://materials/color/black.vmt"
+dest_files=["res://.godot/imported/black.vmt-d103e543fc727e58b02c96e805a15916.vmt.tres"]
+
+[params]
+

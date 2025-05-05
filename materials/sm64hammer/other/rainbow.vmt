@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+    "$basetexture" "SM64hammer/other/rainbow"
+    "%compilenonsolid" "1"
+    "$alpha" "0.5"
+    "$translucent" "1"
+}

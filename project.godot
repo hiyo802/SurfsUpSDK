@@ -18,13 +18,17 @@ config/icon="uid://ysqanrf6aw6x"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/sky_3d/plugin.cfg")
+enabled=PackedStringArray("res://addons/godotfgd/plugin.cfg", "res://addons/godotvmf/plugin.cfg", "res://addons/godotvmtsync/plugin.cfg", "res://addons/sky_3d/plugin.cfg")
 
 [file_customization]
 
 folder_colors={
 "res://Assets/": "red",
 "res://Levels/": "orange",
-"res://Shaders/": "teal",
-"res://docs/": "gray"
+"res://Shaders/": "blue",
+"res://docs/": "gray",
+"res://maps/": "yellow",
+"res://materials/": "green",
+"res://models/": "teal",
+"res://vmf/": "purple"
 }
