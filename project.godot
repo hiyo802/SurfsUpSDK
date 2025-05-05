@@ -24,5 +24,6 @@ enabled=PackedStringArray("res://addons/sky_3d/plugin.cfg")
 folder_colors={
 "res://Assets/": "red",
 "res://Levels/": "orange",
-"res://Shaders/": "teal"
+"res://Shaders/": "teal",
+"res://docs/": "gray"
 }
