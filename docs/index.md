@@ -1,10 +1,14 @@
+---
+title: "Surfs🌊Up SDK"
+---
+
 # SurfsUp SDK Overview
 
 This is the documentation site for creating custom levels in [SurfsUp](https://store.steampowered.com/app/3454830/SurfsUp/)
 
 ## Topics
 * [Getting Started](#getting_started)
-* [Using the Ramp Prefabs](/prefabs)
+* [Using the Ramp Prefabs](prefabs.md)
 * Texturing Ramps
 * Zoning
 * Exporting
