@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c28xui7gwdn5"]
+[gd_scene load_steps=13 format=3 uid="uid://c28xui7gwdn5"]
 
 [ext_resource type="Script" uid="uid://dsdpatrfmbdec" path="res://addons/sky_3d/src/Sky3D.gd" id="1_3158n"]
 [ext_resource type="Script" uid="uid://dmsbx4d0v3ni7" path="res://addons/sky_3d/src/TimeOfDay.gd" id="2_ub4j8"]
 [ext_resource type="Script" uid="uid://fqbc07i6gljh" path="res://addons/sky_3d/src/Skydome.gd" id="3_pvdih"]
 [ext_resource type="PackedScene" uid="uid://2ekgf8ai0k3n" path="res://Levels/Utilities/starting_platform.tscn" id="4_7e6fp"]
 [ext_resource type="PackedScene" uid="uid://cv0c4qmjbp7mb" path="res://Levels/Ramps/Parts/wedge-both-up-90-1024.glb" id="5_4t6x8"]
+[ext_resource type="PackedScene" uid="uid://ck6wobja822h1" path="res://Levels/Ramps/Parts/thin-both-up-45-2048.glb" id="6_ub4j8"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_32sii"]
 
@@ -41,6 +42,10 @@ autoplay = true
 environment = SubResource("Environment_41cum")
 camera_attributes = SubResource("CameraAttributesPractical_qu6j0")
 script = ExtResource("1_3158n")
+sky3d_enabled = false
+sky_enabled = false
+fog_enabled = false
+clouds_enabled = false
 show_physical_sky = true
 enable_editor_time = false
 enable_game_time = false
@@ -130,7 +135,7 @@ atm_sun_mie_anisotropy = 0.8
 atm_moon_mie_tint = Color(0.137255, 0.184314, 0.292196, 1)
 atm_moon_mie_intensity = 0.7
 atm_moon_mie_anisotropy = 0.8
-fog_visible = true
+fog_visible = false
 fog_atm_level_params_offset = Vector3(0, 0, -1)
 fog_density = 0.00015
 fog_rayleigh_depth = 0.116
@@ -140,7 +145,7 @@ fog_start = 0.0
 fog_end = 1000.0
 fog_layers = 524288
 fog_render_priority = 123
-clouds_thickness = 1.7
+clouds_thickness = 0.0
 clouds_coverage = 0.5
 clouds_absorption = 2.0
 clouds_sky_tint_fade = 0.5
@@ -150,7 +155,7 @@ clouds_uv = Vector2(0.16, 0.11)
 clouds_direction = Vector2(0.25, 0.25)
 clouds_speed = 0.07
 set_clouds_texture = false
-clouds_cumulus_visible = true
+clouds_cumulus_visible = false
 clouds_cumulus_day_color = Color(0.823529, 0.87451, 1, 1)
 clouds_cumulus_horizon_light_color = Color(0.98, 0.43, 0.15, 1)
 clouds_cumulus_night_color = Color(0.090196, 0.094118, 0.129412, 1)
@@ -213,3 +218,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.4, 1
 
 [node name="wedge-both-up-90-1024" parent="Level" instance=ExtResource("5_4t6x8")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -137, -118)
+
+[node name="thin-both-up-45-2048" parent="Level" instance=ExtResource("6_ub4j8")]
+transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, -1, -196, -385)

@@ -22,9 +22,8 @@ This is the documentation site for creating custom levels in [SurfsUp](https://s
 * Download, Fork, or Git Clone the [SurfsUpSDK Project](https://github.com/bearlikelion/SurfsUpSDK)
 * Download [Godot v4.4.1](https://godotengine.org/download/archive/4.4.1-stable/)
 * Open the `projet.godot` file
-* Rename `test_level.tscn` to your map's name
+* Rename/duplicate `test_level.tscn` to your map's name
 
-Export project as PCK to the `/Maps` directory next to the SurfsUp executable
-Use the in-game console (tilde) to load your map: `map <pck_name>`
-
-The Exported `PCK Name` and `/Levels/scene_name.tscn` **must match** to load properly
+Export project as PCK to the game's `/Maps` directory next to the SurfsUp executable
+Use the in-game console (tilde) to load your map with the command: `map <pck_name>`
+The Exported `PCK Name` and `/Levels/scene_name.tscn` **must match** to load correctly
