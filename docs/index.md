@@ -27,6 +27,8 @@ This is the documentation site for creating custom levels in [SurfsUp](https://s
 ## Support
 If you are looking for help, having trouble, or just want to show off your creation. Please join the [SurfsUp Discord Server](https://discord.gg/95XmYfPnwV) and post in the **#mapping** channel.
 
+
+## Testing
 Export project as PCK to the game's `/Maps` directory next to the SurfsUp executable
 Use the in-game console (tilde) to load your map with the command: `map <pck_name>`
 The Exported `PCK Name` and `/Levels/scene_name.tscn` **must match** to load correctly
