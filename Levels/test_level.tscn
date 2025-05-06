@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c28xui7gwdn5"]
+[gd_scene load_steps=14 format=3 uid="uid://c28xui7gwdn5"]
 
 [ext_resource type="Script" uid="uid://dsdpatrfmbdec" path="res://addons/sky_3d/src/Sky3D.gd" id="1_3158n"]
 [ext_resource type="Script" uid="uid://dmsbx4d0v3ni7" path="res://addons/sky_3d/src/TimeOfDay.gd" id="2_ub4j8"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://2ekgf8ai0k3n" path="res://Levels/Utilities/starting_platform.tscn" id="4_7e6fp"]
 [ext_resource type="PackedScene" uid="uid://cv0c4qmjbp7mb" path="res://Levels/Ramps/Parts/wedge-both-up-90-1024.glb" id="5_4t6x8"]
 [ext_resource type="PackedScene" uid="uid://ck6wobja822h1" path="res://Levels/Ramps/Parts/thin-both-up-45-2048.glb" id="6_ub4j8"]
+[ext_resource type="Material" uid="uid://bfbpi6k6sr47g" path="res://Assets/Textures/Bricks098/Bricks098.tres" id="7_pvdih"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_32sii"]
 
@@ -221,3 +222,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -13
 
 [node name="thin-both-up-45-2048" parent="Level" instance=ExtResource("6_ub4j8")]
 transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, -1, -196, -385)
+
+[node name="ramp" parent="Level/thin-both-up-45-2048" index="0"]
+material_override = ExtResource("7_pvdih")
+
+[editable path="Level/thin-both-up-45-2048"]

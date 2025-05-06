@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e5yj31vee5mc"
-path.s3tc="res://.godot/imported/split-ramp_concretewall011.png-47d83c849d37f4bfe65def3005fc56e5.s3tc.ctex"
+uid="uid://b2c0d5b5kt54a"
+path.s3tc="res://.godot/imported/sep-split-ramp_concretewall001e.png-3d26afb2dd944a99893c5bfa932d07bf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "85c86889743e6b2fdf2d43ab3d9d91c8"
+"md5": "270e3d1bcc90dd19942fbf3b42a7bba8"
 }
 
 [deps]
 
-source_file="res://Assets/Textures/split-ramp_concretewall011.png"
-dest_files=["res://.godot/imported/split-ramp_concretewall011.png-47d83c849d37f4bfe65def3005fc56e5.s3tc.ctex"]
+source_file="res://Assets/Textures/SplitRampsConcrete/sep-split-ramp_concretewall001e.png"
+dest_files=["res://.godot/imported/sep-split-ramp_concretewall001e.png-3d26afb2dd944a99893c5bfa932d07bf.s3tc.ctex"]
 
 [params]
 
