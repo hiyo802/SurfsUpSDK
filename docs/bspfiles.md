@@ -1,6 +1,6 @@
 ---
-title: "Ramp Prefabs"
-permalink: /prefabs/
+title: "BSP Files"
+permalink: /bsp/
 ---
 
 # Porting BSP Files

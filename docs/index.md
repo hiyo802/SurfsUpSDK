@@ -16,7 +16,7 @@ This is the documentation site for creating custom levels in [SurfsUp](https://s
 * [Testing the Map in Game](testing.md)
 * Using Hammer VMF files with Godot
 * Using SURGE/Blender to create ramps
-* Decompiling and porting BSP files
+* [Decompiling and porting BSP files](bspfiles.md)
 
 ## <a name="getting_started"></a>Getting Started
 * Download, Fork, or Git Clone the [SurfsUpSDK Project](https://github.com/bearlikelion/SurfsUpSDK)
