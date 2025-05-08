@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://c28xui7gwdn5"]
+[gd_scene load_steps=10 format=3 uid="uid://c28xui7gwdn5"]
 
 [ext_resource type="PackedScene" uid="uid://2ekgf8ai0k3n" path="res://Levels/Utilities/starting_platform.tscn" id="4_7e6fp"]
+[ext_resource type="PackedScene" uid="uid://brjoli0m0kmtf" path="res://Levels/Ramps/Parts/up_45_1024.glb" id="4_i4ak4"]
 [ext_resource type="PackedScene" uid="uid://cv0c4qmjbp7mb" path="res://Levels/Ramps/Parts/wedge-both-up-90-1024.glb" id="5_4t6x8"]
 [ext_resource type="PackedScene" uid="uid://ck6wobja822h1" path="res://Levels/Ramps/Parts/thin-both-up-45-2048.glb" id="6_ub4j8"]
 
@@ -89,5 +90,8 @@ transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, -1, -1
 
 [node name="ramp" parent="Level/thin-both-up-45-2048" index="0"]
 transform = Transform3D(0.0258816, 0.0965927, -1.01549e-10, -0.0965927, 0.0258816, 7.7134e-10, 7.71341e-10, -1.01546e-10, 0.1, 0, 0, 0)
+
+[node name="up_45_1024" parent="." instance=ExtResource("4_i4ak4")]
+transform = Transform3D(-1.31134e-07, 0, 3, 0.776457, 2.89778, 3.394e-08, -2.89778, 0.776457, -1.26666e-07, 1, -288, -822)
 
 [editable path="Level/thin-both-up-45-2048"]
