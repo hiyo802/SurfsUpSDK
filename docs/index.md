@@ -9,7 +9,7 @@ This is the documentation site for creating custom levels in [SurfsUp](https://s
 ## Getting Started
 * Download, Fork, or Git Clone the [SurfsUpSDK Project](https://github.com/bearlikelion/SurfsUpSDK)
 * Download [Godot v4.4.1](https://godotengine.org/download/archive/4.4.1-stable/)
-* Open the `projet.godot` file
+* Open the `project.godot` file
 * Rename/duplicate `test_level.tscn` to your map's name
 
 ## Topics
