@@ -6,14 +6,13 @@ permalink: /exporting/
 # Exporting the Map
 
 Once you've completed your map's layout and want to test it in-game, we'll need to **export** the Map to a PCK file
-Go to Project -> Export in Godot's top menu bar
-![Export Project](https://raw.githubusercontent.com/bearlikelion/SurfsUpSDK/refs/heads/main/docs/assets/img/exporting/export_project.png)
+First, go to `Project -> Tools -> [SurfsUp] SDK Tools -> Set Maps Directory`
+![SDK Tools](https://raw.githubusercontent.com/bearlikelion/SurfsUpSDK/refs/heads/main/docs/assets/img/exporting/sdk_tools.png)
 
-Click on **Custom Map (Export as PCK)**
-Under the Export Settings, go to the **Resources** tab and *only* export your custom level's .TSCN file
-![Export Resources](https://raw.githubusercontent.com/bearlikelion/SurfsUpSDK/refs/heads/main/docs/assets/img/exporting/export_resources.png)
+Set your **Maps Directory** export next to the **SurfsUp Executable**
+![Maps Directory]((https://raw.githubusercontent.com/bearlikelion/SurfsUpSDK/refs/heads/main/docs/assets/img/exporting/set_maps_dir.png))
 
-Click on the **Export PCK/ZIP** bottom button, and save your `map_name.pck` directly to `<install_dir>\Maps`
-Example Path: `steamapps/common/SurfsUp/Maps`
-**Keep in mind:** The `map_name.pck` and `Levels\map_name.tscn` needs to match in order to load in-game
-Once exported, you can [load your map in-game](testing.md)
+Once the maps directory is set, press the **Export Map Button in the top right** of the editor.
+![Export Button](https://raw.githubusercontent.com/bearlikelion/SurfsUpSDK/refs/heads/main/docs/assets/img/exporting/export_button.png)
+
+Then you can [load your map in-game](testing.md)
