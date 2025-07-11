@@ -1,0 +1,256 @@
+[gd_scene load_steps=64 format=3 uid="uid://dc2jgsdqwx3c1"]
+
+[ext_resource type="PackedScene" uid="uid://eud6qdgwrfag" path="res://Levels/Ramps/Parts/arc_45_1024.glb" id="1_l11lg"]
+[ext_resource type="PackedScene" uid="uid://dj2ts6clhgju7" path="res://Levels/Ramps/Parts/dip_45_1024.glb" id="2_nowaa"]
+[ext_resource type="PackedScene" uid="uid://b1grqum7arlp5" path="res://Levels/Ramps/Parts/down-straight.glb" id="3_tvcka"]
+[ext_resource type="PackedScene" uid="uid://lt0cmnayrjwt" path="res://Levels/Ramps/Parts/down_30_1024.glb" id="4_e0xuy"]
+[ext_resource type="PackedScene" uid="uid://b13uiedvf4okd" path="res://Levels/Ramps/Parts/down_45_1024.glb" id="5_p18sd"]
+[ext_resource type="PackedScene" uid="uid://cyb2sevvjhecd" path="res://Levels/Ramps/Parts/down_90_1024.glb" id="6_1knne"]
+[ext_resource type="PackedScene" uid="uid://c1frgbqb45mnb" path="res://Levels/Ramps/Parts/insidee.glb" id="7_14suv"]
+[ext_resource type="PackedScene" uid="uid://bxxw6a2pcix5l" path="res://Levels/Ramps/Parts/sep-split-ramp.glb" id="8_aqa58"]
+[ext_resource type="PackedScene" uid="uid://b6k0p8fukq1kx" path="res://Levels/Ramps/Parts/split-ramp.glb" id="9_ca8pa"]
+[ext_resource type="PackedScene" uid="uid://ck6wobja822h1" path="res://Levels/Ramps/Parts/thin-both-up-45-2048.glb" id="10_4x182"]
+[ext_resource type="PackedScene" uid="uid://qjlffyfesw0n" path="res://Levels/Ramps/Parts/thin-down-45.glb" id="11_ln7ix"]
+[ext_resource type="PackedScene" uid="uid://bybf10xsy0r7v" path="res://Levels/Ramps/Parts/thin-down-90.glb" id="12_por7o"]
+[ext_resource type="PackedScene" uid="uid://d3kro4jdabfpy" path="res://Levels/Ramps/Parts/thin-left-dip-90.glb" id="13_ii7pr"]
+[ext_resource type="PackedScene" uid="uid://cncqi6x5jvb8j" path="res://Levels/Ramps/Parts/thin-left-down-45.glb" id="14_hs34g"]
+[ext_resource type="PackedScene" uid="uid://b1ngpxyomnjg7" path="res://Levels/Ramps/Parts/thin-left-left-30.glb" id="15_di7jj"]
+[ext_resource type="PackedScene" uid="uid://c613allsns4vu" path="res://Levels/Ramps/Parts/thin-left-right-45-2048.glb" id="16_8nbc5"]
+[ext_resource type="PackedScene" uid="uid://duyvd8dm8mj1j" path="res://Levels/Ramps/Parts/thin-left-right-45.glb" id="17_mlybf"]
+[ext_resource type="PackedScene" uid="uid://dli5kj788uk2v" path="res://Levels/Ramps/Parts/thin-left-right-180.glb" id="18_s1qjg"]
+[ext_resource type="PackedScene" uid="uid://clh8c3dok5e8f" path="res://Levels/Ramps/Parts/thin-left-up-15-4096.glb" id="19_21jmd"]
+[ext_resource type="PackedScene" uid="uid://d13lvpggs8c0i" path="res://Levels/Ramps/Parts/thin-left-up-45-2048.glb" id="20_eksfo"]
+[ext_resource type="PackedScene" uid="uid://bq5ntgh27gmnx" path="res://Levels/Ramps/Parts/thin-left.glb" id="21_1xioq"]
+[ext_resource type="PackedScene" uid="uid://ih1aryps6k1w" path="res://Levels/Ramps/Parts/thin-right-down-45.glb" id="22_j8sf5"]
+[ext_resource type="PackedScene" uid="uid://c2nwkebj3rf55" path="res://Levels/Ramps/Parts/thin-right-left-45-2048.glb" id="23_7eluo"]
+[ext_resource type="PackedScene" uid="uid://coafq6q473f0i" path="res://Levels/Ramps/Parts/thin-right-left-45.glb" id="24_1mei8"]
+[ext_resource type="PackedScene" uid="uid://bm4er8oxiywuw" path="res://Levels/Ramps/Parts/thin-right-leftleaning.glb" id="25_v2wdh"]
+[ext_resource type="PackedScene" uid="uid://yqi76ldjglfv" path="res://Levels/Ramps/Parts/thin-right-right-30.glb" id="26_5321y"]
+[ext_resource type="PackedScene" uid="uid://biivi72be7eoo" path="res://Levels/Ramps/Parts/thin-right-up-15-4096.glb" id="27_dtscx"]
+[ext_resource type="PackedScene" uid="uid://bft5ds70acldb" path="res://Levels/Ramps/Parts/thin-right-up-33-4096.glb" id="28_kea4p"]
+[ext_resource type="PackedScene" uid="uid://doiwaabsbc8l7" path="res://Levels/Ramps/Parts/thin-right-up-45-2048.glb" id="29_jf1rh"]
+[ext_resource type="PackedScene" uid="uid://dimd6ote67whd" path="res://Levels/Ramps/Parts/thin-right-up-66-2048.glb" id="30_gfduy"]
+[ext_resource type="PackedScene" uid="uid://dmrkitv6l5j0e" path="res://Levels/Ramps/Parts/thin-up-45.glb" id="31_g1vvt"]
+[ext_resource type="PackedScene" uid="uid://bfbg68mskjp4a" path="res://Levels/Ramps/Parts/thin-up-90.glb" id="32_5rcla"]
+[ext_resource type="PackedScene" uid="uid://b68tifaptmhib" path="res://Levels/Ramps/Parts/turn_45_1024.glb" id="33_cakpj"]
+[ext_resource type="PackedScene" uid="uid://c6nmooyb1s58s" path="res://Levels/Ramps/Parts/turn_left_90_1024.glb" id="34_455ul"]
+[ext_resource type="PackedScene" uid="uid://wpw6nw4trkad" path="res://Levels/Ramps/Parts/turn_right_90_1024.glb" id="35_i5pgr"]
+[ext_resource type="PackedScene" uid="uid://dr1vj14xwb47j" path="res://Levels/Ramps/Parts/up_30_1024.glb" id="36_qrcjs"]
+[ext_resource type="PackedScene" uid="uid://brjoli0m0kmtf" path="res://Levels/Ramps/Parts/up_45_1024.glb" id="37_22lv4"]
+[ext_resource type="PackedScene" uid="uid://c125fxtnxap7k" path="res://Levels/Ramps/Parts/wedge-both-dip-33-2048.glb" id="38_j8v8h"]
+[ext_resource type="PackedScene" uid="uid://dm0588ofky1wy" path="res://Levels/Ramps/Parts/wedge-both-left-90-1024.glb" id="39_eii70"]
+[ext_resource type="PackedScene" uid="uid://vmb2uhi8ra57" path="res://Levels/Ramps/Parts/wedge-both-right-90-1024.glb" id="40_ljcs0"]
+[ext_resource type="PackedScene" uid="uid://dnlxwpapat0yi" path="res://Levels/Ramps/Parts/wedge-both-up-15-4096.glb" id="41_3oq4l"]
+[ext_resource type="PackedScene" uid="uid://c8iijna7eq6ad" path="res://Levels/Ramps/Parts/wedge-both-up-15-5120.glb" id="42_hsb2f"]
+[ext_resource type="PackedScene" uid="uid://cqteffsedbfj6" path="res://Levels/Ramps/Parts/wedge-both-up-33-5120.glb" id="43_foye0"]
+[ext_resource type="PackedScene" uid="uid://dkjauwl4plaae" path="res://Levels/Ramps/Parts/wedge-both-up-45-512.glb" id="44_ykgjn"]
+[ext_resource type="PackedScene" uid="uid://cvaj8oyq3gduk" path="res://Levels/Ramps/Parts/wedge-both-up-66-2048.glb" id="45_rjbcx"]
+[ext_resource type="PackedScene" uid="uid://cv0c4qmjbp7mb" path="res://Levels/Ramps/Parts/wedge-both-up-90-1024.glb" id="46_rmcrh"]
+[ext_resource type="PackedScene" uid="uid://ilbvp3tkxxx0" path="res://Levels/Ramps/Parts/wedge-both-up-135-4096.glb" id="47_7fx4j"]
+[ext_resource type="PackedScene" uid="uid://dxacf8v1tua7u" path="res://Levels/Ramps/Parts/wedge-both-up-180-4096.glb" id="48_3gx07"]
+[ext_resource type="PackedScene" uid="uid://cyfdbvbatmmvr" path="res://Levels/Ramps/Parts/wedge-down-both-15-4096.glb" id="49_kg4m8"]
+[ext_resource type="PackedScene" uid="uid://dstr1wmn04718" path="res://Levels/Ramps/Parts/wedge-left-dip-33-1024.glb" id="50_noqaj"]
+[ext_resource type="PackedScene" uid="uid://c478ucupxisv3" path="res://Levels/Ramps/Parts/wedge-left-down-15-4096.glb" id="51_eibq8"]
+[ext_resource type="PackedScene" uid="uid://fosh3gnbvc3o" path="res://Levels/Ramps/Parts/wedge-left-left-30-1024.glb" id="52_wo4pw"]
+[ext_resource type="PackedScene" uid="uid://bexb8ovd5wlwx" path="res://Levels/Ramps/Parts/wedge-left-right-15-5124.glb" id="53_ofl7s"]
+[ext_resource type="PackedScene" uid="uid://d35qoo27q1lm6" path="res://Levels/Ramps/Parts/wedge-left-right-45.glb" id="54_85hrh"]
+[ext_resource type="PackedScene" uid="uid://b7ff21o2vyu7m" path="res://Levels/Ramps/Parts/wedge-left-right-75-1024.glb" id="55_ueihf"]
+[ext_resource type="PackedScene" uid="uid://p0o87qg72dao" path="res://Levels/Ramps/Parts/wedge-left-right-90-1024.glb" id="56_beeas"]
+[ext_resource type="PackedScene" uid="uid://bdc5luuh00ebd" path="res://Levels/Ramps/Parts/wedge-right-dip-33-1024.glb" id="57_u7eed"]
+[ext_resource type="PackedScene" uid="uid://d12l0am4wgk2n" path="res://Levels/Ramps/Parts/wedge-right-left-15-5124.glb" id="58_sios5"]
+[ext_resource type="PackedScene" uid="uid://dx3h3v7dg7xno" path="res://Levels/Ramps/Parts/wedge-right-left-45.glb" id="59_xteya"]
+[ext_resource type="PackedScene" uid="uid://dr48lanicq73c" path="res://Levels/Ramps/Parts/wedge-right-left-75-1024.glb" id="60_pbqe5"]
+[ext_resource type="PackedScene" uid="uid://h2mwu8eioktq" path="res://Levels/Ramps/Parts/wedge-right-left-90-1024.glb" id="61_ln3g1"]
+[ext_resource type="PackedScene" uid="uid://cojftpin4fycq" path="res://Levels/Ramps/Parts/wedge-right-right-30-1024.glb" id="62_0g3mk"]
+[ext_resource type="PackedScene" uid="uid://dep6rbw1ljnk3" path="res://Levels/Ramps/Parts/wedge-right-up-15-4096.glb" id="63_hwo53"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="arc_45_1024" parent="." instance=ExtResource("1_l11lg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -105.156, 0.858795, -597.329)
+
+[node name="dip_45_1024" parent="." instance=ExtResource("2_nowaa")]
+transform = Transform3D(3.17287, 0.0188838, 0, -0.0188838, 3.17287, 0, 0, 0, 3.17292, 7.18576, 0, -718.301)
+
+[node name="down-straight" parent="." instance=ExtResource("3_tvcka")]
+transform = Transform3D(3.09607, 0, 0, 0, 3.09607, 0, 0, 0, 3.09607, -87.9041, -0.794556, -899.99)
+
+[node name="down_30_1024" parent="." instance=ExtResource("4_e0xuy")]
+transform = Transform3D(3.29497, 0, 0, 0, 3.29497, 0, 0, 0, 3.29497, -439.629, 0, -1032.83)
+
+[node name="down_45_1024" parent="." instance=ExtResource("5_p18sd")]
+transform = Transform3D(3.36775, 0, 0, 0, 3.36775, 0, 0, 0, 3.36775, -430.583, 83.3332, -956.326)
+
+[node name="down_90_1024" parent="." instance=ExtResource("6_1knne")]
+transform = Transform3D(3.05634, 0.0181902, 0, -0.0181902, 3.05634, 0, 0, 0, 3.05639, -432.296, 0, 392.471)
+
+[node name="insidee" parent="." instance=ExtResource("7_14suv")]
+transform = Transform3D(5.5376, 0, 0, 0, 5.5376, 0, 0, 0, 5.5376, 1.32144, 3.05176e-05, 258.291)
+
+[node name="sep-split-ramp" parent="." instance=ExtResource("8_aqa58")]
+transform = Transform3D(6.29862, 0, 0, 0, 6.29862, 0, 0, 0, 6.29862, 542.012, -6.10352e-05, 305.516)
+
+[node name="split-ramp" parent="." instance=ExtResource("9_ca8pa")]
+transform = Transform3D(6.44916, 0, 0, 0, 6.44916, 0, 0, 0, 6.44916, 458.605, 3.05176e-05, -925.846)
+
+[node name="thin-both-up-45-2048" parent="." instance=ExtResource("10_4x182")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -429.85, 0, -189.516)
+
+[node name="thin-down-45" parent="." instance=ExtResource("11_ln7ix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -448.85, 29.8462, -758.102)
+
+[node name="thin-down-90" parent="." instance=ExtResource("12_por7o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -442.638, 83.7935, -836.199)
+
+[node name="thin-left-dip-90" parent="." instance=ExtResource("13_ii7pr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.1364, 6.10352e-05, -520.184)
+
+[node name="thin-left-down-45" parent="." instance=ExtResource("14_hs34g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 288.849, 6.10352e-05, -257.25)
+
+[node name="thin-left-left-30" parent="." instance=ExtResource("15_di7jj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 295.405, 0, -315.908)
+
+[node name="thin-left-right-45-2048" parent="." instance=ExtResource("16_8nbc5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 301.655, 6.10352e-05, 256.043)
+
+[node name="thin-left-right-45" parent="." instance=ExtResource("17_mlybf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 276.412, -6.10352e-05, 355.745)
+
+[node name="thin-left-right-180" parent="." instance=ExtResource("18_s1qjg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.743, 0, 64.4779)
+
+[node name="thin-left-up-15-4096" parent="." instance=ExtResource("19_21jmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 300.731, 6.10352e-05, 21.7366)
+
+[node name="thin-left-up-45-2048" parent="." instance=ExtResource("20_eksfo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -429.515, 0, -320.948)
+
+[node name="thin-left" parent="." instance=ExtResource("21_1xioq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.627, 6.10352e-05, -208.311)
+
+[node name="thin-right-down-45" parent="." instance=ExtResource("22_j8sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 274.991, 6.10352e-05, 510.175)
+
+[node name="thin-right-left-45-2048" parent="." instance=ExtResource("23_7eluo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 313.64, -6.10352e-05, -193.292)
+
+[node name="thin-right-left-45" parent="." instance=ExtResource("24_1mei8")]
+transform = Transform3D(0.999982, 0.00595154, 0, -0.00595154, 0.999982, 0, 0, 0, 1, 293.161, -6.10352e-05, 68.9762)
+
+[node name="thin-right-leftleaning" parent="." instance=ExtResource("25_v2wdh")]
+transform = Transform3D(0.999982, 0.00595154, 0, -0.00595154, 0.999982, 0, 0, 0, 1, 37.0584, -0.00012207, -212.952)
+
+[node name="thin-right-right-30" parent="." instance=ExtResource("26_5321y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 271.02, 6.10352e-05, 431.695)
+
+[node name="thin-right-up-15-4096" parent="." instance=ExtResource("27_dtscx")]
+transform = Transform3D(0.999982, 0.00595154, 0, -0.00595154, 0.999982, 0, 0, 0, 1, -245.767, 0.00012207, -596.625)
+
+[node name="thin-right-up-33-4096" parent="." instance=ExtResource("28_kea4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -434.47, 3.05176e-05, 249.038)
+
+[node name="thin-right-up-45-2048" parent="." instance=ExtResource("29_jf1rh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -432.871, 3.05176e-05, -261.675)
+
+[node name="thin-right-up-66-2048" parent="." instance=ExtResource("30_gfduy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430, 0, 116.61)
+
+[node name="thin-up-45" parent="." instance=ExtResource("31_g1vvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -443.943, 0, -613.451)
+
+[node name="thin-up-90" parent="." instance=ExtResource("32_5rcla")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430, 0, -38.198)
+
+[node name="turn_45_1024" parent="." instance=ExtResource("33_cakpj")]
+transform = Transform3D(2.72212, 0.0162011, 0, -0.0162011, 2.72212, 0, 0, 0, 2.72217, 183.025, 0, -518.071)
+
+[node name="turn_left_90_1024" parent="." instance=ExtResource("34_455ul")]
+transform = Transform3D(2.75438, 0.0163931, 0, -0.0163931, 2.75438, 0, 0, 0, 2.75443, -85.7465, -6.10352e-05, -358.078)
+
+[node name="turn_right_90_1024" parent="." instance=ExtResource("35_i5pgr")]
+transform = Transform3D(2.83019, 0, 0, 0, 2.83019, 0, 0, 0, 2.83019, -84.3675, 0, 270.193)
+
+[node name="up_30_1024" parent="." instance=ExtResource("36_qrcjs")]
+transform = Transform3D(3.30165, 0.0196503, 0, -0.0196503, 3.30165, 0, 0, 0, 3.30171, -434.037, 0, 45.607)
+
+[node name="up_45_1024" parent="." instance=ExtResource("37_22lv4")]
+transform = Transform3D(3.26175, 0.0194128, 0, -0.0194128, 3.26175, 0, 0, 0, 3.26181, 146.999, -6.10352e-05, -807.174)
+
+[node name="wedge-both-dip-33-2048" parent="." instance=ExtResource("38_j8v8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -509.73, 3.05176e-05, -452.539)
+
+[node name="wedge-both-left-90-1024" parent="." instance=ExtResource("39_eii70")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100.243, 0, 322.409)
+
+[node name="wedge-both-right-90-1024" parent="." instance=ExtResource("40_ljcs0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.6823, 0, 548.883)
+
+[node name="wedge-both-up-15-4096" parent="." instance=ExtResource("41_3oq4l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -444.438, 9.15527e-05, -538.731)
+
+[node name="wedge-both-up-15-5120" parent="." instance=ExtResource("42_hsb2f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -441.054, 0, -381.087)
+
+[node name="wedge-both-up-33-5120" parent="." instance=ExtResource("43_foye0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430, 0, 300)
+
+[node name="wedge-both-up-45-512" parent="." instance=ExtResource("44_ykgjn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -447.594, 0, -686.388)
+
+[node name="wedge-both-up-66-2048" parent="." instance=ExtResource("45_rjbcx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430, 0, 200)
+
+[node name="wedge-both-up-90-1024" parent="." instance=ExtResource("46_rmcrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430, 0, -108.327)
+
+[node name="wedge-both-up-135-4096" parent="." instance=ExtResource("47_7fx4j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430, 0, 483.704)
+
+[node name="wedge-both-up-180-4096" parent="." instance=ExtResource("48_3gx07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -430, 0, 569.269)
+
+[node name="wedge-down-both-15-4096" parent="." instance=ExtResource("49_kg4m8")]
+transform = Transform3D(1.19704, 0, 0, 0, 1.19704, 0, 0, 0, 1.19704, -251.923, 6.10352e-05, -889.601)
+
+[node name="wedge-left-dip-33-1024" parent="." instance=ExtResource("50_noqaj")]
+transform = Transform3D(0.134941, 0, 0, 0, 0.134941, 0, 0, 0, 0.134941, -305.38, 0, -823.619)
+
+[node name="wedge-left-down-15-4096" parent="." instance=ExtResource("51_eibq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -241.523, -6.10352e-05, -716.676)
+
+[node name="wedge-left-left-30-1024" parent="." instance=ExtResource("52_wo4pw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -232.087, -6.10352e-05, -531.746)
+
+[node name="wedge-left-right-15-5124" parent="." instance=ExtResource("53_ofl7s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -221.893, -6.10352e-05, -438.921)
+
+[node name="wedge-left-right-45" parent="." instance=ExtResource("54_85hrh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 282.043, -6.10352e-05, 162.473)
+
+[node name="wedge-left-right-75-1024" parent="." instance=ExtResource("55_ueihf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.118, 0, 546.959)
+
+[node name="wedge-left-right-90-1024" parent="." instance=ExtResource("56_beeas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -243.919, 0, 558.567)
+
+[node name="wedge-right-dip-33-1024" parent="." instance=ExtResource("57_u7eed")]
+transform = Transform3D(1.40337, 0, 0, 0, 1.40337, 0, 0, 0, 1.40337, -304.119, 6.10352e-05, -768.996)
+
+[node name="wedge-right-left-15-5124" parent="." instance=ExtResource("58_sios5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 306.945, 6.10352e-05, -73.5848)
+
+[node name="wedge-right-left-45" parent="." instance=ExtResource("59_xteya")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 168.083, 6.10352e-05, -319.464)
+
+[node name="wedge-right-left-75-1024" parent="." instance=ExtResource("60_pbqe5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.763, 0, -333.069)
+
+[node name="wedge-right-left-90-1024" parent="." instance=ExtResource("61_ln3g1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -252.83, 0.338, 332.074)
+
+[node name="wedge-right-right-30-1024" parent="." instance=ExtResource("62_0g3mk")]
+transform = Transform3D(1.6324, 0, 0, 0, 1.6324, 0, 0, 0, 1.6324, -258.833, 6.10352e-05, -955.484)
+
+[node name="wedge-right-up-15-4096" parent="." instance=ExtResource("63_hwo53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -240.468, 0, -663.419)
