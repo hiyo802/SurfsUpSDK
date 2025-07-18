@@ -2,10 +2,10 @@ class_name MDLMeshGenerator extends RefCounted
 
 static func generate_mesh(mdl: MDLReader, vtx: VTXReader, vvd: VVDReader, phy: PHYReader, options: Dictionary) -> MeshInstance3D:
 	var mesh_instance := create_mesh_instance(mdl, vtx, vvd, options);
-	# var skeleton := generate_skeleton(mesh_instance, mdl, options);
+	var skeleton := generate_skeleton(mesh_instance, mdl, options);
 
 	generate_lods(mesh_instance, options)
-	generate_collision(mesh_instance, null, phy, options);
+	generate_collision(mesh_instance, skeleton, phy, options);
 	create_occluder(mesh_instance, options);
 	assign_materials(mesh_instance, mdl);
 
@@ -29,7 +29,6 @@ static func create_mesh_instance(mdl: MDLReader, vtx: VTXReader, vvd: VVDReader,
 
 		for strip_group in mesh.strip_groups:
 			st.begin(Mesh.PRIMITIVE_TRIANGLES);
-	
 			for vert_info in strip_group.vertices:
 				var vid = vvd.find_vertex_index(model_vertex_index_start + mdl_mesh.vertex_index_start + vert_info.orig_mesh_vert_id);
 				var vert := vvd.vertices[vid];
@@ -43,6 +42,7 @@ static func create_mesh_instance(mdl: MDLReader, vtx: VTXReader, vvd: VVDReader,
 				st.add_vertex(vert.position * additional_basis);
 	
 			for indice in strip_group.indices:
+				if indice > strip_group.vertices.size() - 1: break;
 				st.add_index(indice);
 	
 			st.commit(array_mesh);
@@ -123,7 +123,7 @@ static func create_occluder(mesh_instance: MeshInstance3D, options):
 	occluder.set_owner(mesh_instance);
 
 # TODO: For non-static props collision should be rotated by 90 degrees around y-axis
-static func generate_collision(root: Node3D, skeleton, phy: PHYReader, options: Dictionary):
+static func generate_collision(root: Node3D, skeleton: Skeleton3D, phy: PHYReader, options: Dictionary):
 	var scale = options.scale if not options.use_global_scale else VMFConfig.import.scale;
 	var additional_rotation: Vector3 = options.get("additional_rotation", Vector3.ZERO);
 	var additional_basis = Basis.from_euler(additional_rotation / 180.0 * PI).scaled(Vector3.ONE * scale);
@@ -145,7 +145,7 @@ static func generate_collision(root: Node3D, skeleton, phy: PHYReader, options: 
 			# FIXME: Use ConvexPolygonShape3D instead of ConcavePolygonShape3D
 			# 		 but if it used then for some models it triggers an error
 			# 		 "Failed to build convex hull godot"
-			var shape: ConvexPolygonShape3D = ConvexPolygonShape3D.new();
+			var shape: ConcavePolygonShape3D = ConcavePolygonShape3D.new();
 
 			collision.shape = shape;
 			collision.name = "collision_" + str(surface_index) + "_" + str(solid_index);
@@ -160,9 +160,10 @@ static func generate_collision(root: Node3D, skeleton, phy: PHYReader, options: 
 
 				vertices.append_array([v1, v2, v3]);
 
-			collision.shape.points = PackedVector3Array(vertices);
+			collision.shape.set_faces(PackedVector3Array(vertices));
 
-			if skeleton:
+			# NOTE: We don't need bone attachment for static bodies since they has only one bone
+			if skeleton and !skeleton.find_bone("static_body"):
 				var bone_attachment: BoneAttachment3D = BoneAttachment3D.new();
 				bone_attachment.name = "bone_attachment_" + str(surface_index) + "_" + str(solid_index);
 				bone_attachment.bone_idx = max(0, solid.bone_index - 1);
@@ -226,7 +227,7 @@ static func assign_materials(mesh_instance: MeshInstance3D, mdl: MDLReader):
 	for tex in mdl.textures:
 		for dir in mdl.textureDirs:
 			var path = VMFUtils.normalize_path(dir + "/" + tex.name);
-			var material = VMTLoader.get_material(path);
+			var material = VMTLoader.get_material(path.to_lower());
 			if not material: continue;
 			materials.append(material);
 
@@ -237,7 +238,9 @@ static func assign_materials(mesh_instance: MeshInstance3D, mdl: MDLReader):
 		skin_materials.resize(surfaces);
 
 		for i in range(surfaces):
+			if i >= skin_family.size(): continue;
 			var material_index = skin_family[i];
+			if material_index >= materials.size() - 1: continue;
 			skin_materials.set(i, materials[material_index]);
 
 		mesh_instance.set_meta("skin_" + str(skin_id), skin_materials);

@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cncr6mw1ul60l"]
+
+[ext_resource type="FontFile" uid="uid://dup8amy6ngjgk" path="res://Assets/Fonts/Kenyan Coffee Rg.otf" id="1_yv1j0"]
+
+[resource]
+default_font = ExtResource("1_yv1j0")

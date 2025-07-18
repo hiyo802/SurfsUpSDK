@@ -61,7 +61,7 @@ func is_entity_scripts_changed():
 		if not is_changed:
 			is_changed = script_hashes.get(filename, "") != hash;
 		script_hashes[filename] = hash;
-
+	
 	return is_changed;
 
 func recompose_fgd(resources = null):
@@ -73,7 +73,7 @@ func recompose_fgd(resources = null):
 
 	var scripts: Array = files \
 		.filter(func(file): if file.get_extension() == "gd": return true) \
-		.map(func(file):
+		.map(func(file): 
 			var file_path = VMFConfig.import.entities_folder + '/' + file \
 				if not file.begins_with("res://") \
 				else file;
@@ -108,7 +108,7 @@ func get_flags(script: Script):
 
 	var base_flags = script.get_base_script().get_script_constant_map().keys() \
 		.filter(func(n: String): return n.begins_with("FLAG_"));
-
+	
 	flags.append_array(base_flags);
 
 	for flag in flags:
@@ -123,7 +123,7 @@ func get_flags(script: Script):
 		});
 
 		index += 1;
-
+	
 	return "\n".join(flags);
 
 func get_inputs(script: Script):
@@ -159,15 +159,15 @@ func get_outputs(script: Script):
 			"signal_name": sig.name,
 			"signal_type": type,
 		}));
-
+	
 	return "\n".join(outputs);
 
 func get_properties(script: Script):
 	var properties = script.get_script_property_list() \
-	.filter(func(prop):
+	.filter(func(prop): 
 		return get_prop_decorators(script, prop.name).has("exposed");
 	) \
-	.map(func(prop):
+	.map(func(prop): 
 		var default_value = get_prop_default_value(script, prop.name);
 		var description = get_prop_description(script, prop.name);
 		var template = PROPERTY_TEMPLATE;

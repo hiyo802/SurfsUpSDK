@@ -61,7 +61,7 @@ func _create_watcher_structure():
 
 func _begin_watch(eplugin_instance: EditorPlugin):
 	eplugin = eplugin_instance;
-
+	
 	call_deferred("_create_watcher_structure");
 
 func _stop_watch(eplugin_instance: EditorPlugin):
@@ -180,7 +180,7 @@ func _recheck_resources(_null = null):
 	VMFConfig.load_config();
 
 	is_in_process = true;
-
+	
 	_preload_resources();
 	_recheck_materials();
 	_recheck_textures();
@@ -233,7 +233,7 @@ func _on_material_added(file: String):
 	vmt.store_string("\t\"$basetexture\" \"" + basetexture + "\"\n");
 	vmt.store_string("}");
 	vmt.close();
-
+	
 	VMFLogger.log("Material added: " + file);
 
 func _on_material_removed(file: String):
@@ -249,7 +249,7 @@ func _on_material_removed(file: String):
 
 	if FileAccess.file_exists(vmt_file):
 		DirAccess.remove_absolute(vmt_file);
-
+	
 	if FileAccess.file_exists(vtf_file):
 		DirAccess.remove_absolute(vtf_file);
 
@@ -354,7 +354,7 @@ func get_all_files(path: String, file_ext := "", files := []):
 				if file_ext and file_name.get_extension() != file_ext:
 					file_name = dir.get_next()
 					continue
-
+				
 				files.append(dir.get_current_dir() +"/"+ file_name)
 
 			file_name = dir.get_next()

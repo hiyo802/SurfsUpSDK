@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://c24nm4lso5bw8"]
+
+[ext_resource type="Texture2D" uid="uid://dj83qdoagvjvg" path="res://Assets/Textures/Moon002/Moon_002_basecolor.png" id="1_q3e7r"]
+[ext_resource type="Texture2D" uid="uid://b6ijqmkfxii2s" path="res://Assets/Textures/Moon002/Moon_002_ambientOcclusion.png" id="2_7ibel"]
+[ext_resource type="Texture2D" uid="uid://bjiff4g0u6ccd" path="res://Assets/Textures/Moon002/Moon_002_height.png" id="3_xtqvj"]
+[ext_resource type="Texture2D" uid="uid://bp8h4f85tdvgy" path="res://Assets/Textures/Moon002/Moon_002_normal.png" id="4_uwx8s"]
+[ext_resource type="Texture2D" uid="uid://bqg8c33leqbma" path="res://Assets/Textures/Moon002/Moon_002_roughness.png" id="5_iqrsq"]
+
+[resource]
+albedo_texture = ExtResource("1_q3e7r")
+roughness_texture = ExtResource("5_iqrsq")
+normal_enabled = true
+normal_texture = ExtResource("4_uwx8s")
+ao_enabled = true
+ao_texture = ExtResource("2_7ibel")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_xtqvj")

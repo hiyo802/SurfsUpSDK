@@ -158,10 +158,12 @@ static func parse_connections(caller: Node) -> void:
 		for connectionData in connections:
 			var arr = connectionData.split(",");
 			var target = arr[0];
-			var input = arr[1];
-			var param = arr[2];
-			var delay = float(arr[3]);
-			var times = arr[4];
+			var input = arr[1] if arr.size() > 1 else "";
+			var param = arr[2] if arr.size() > 2 else "";
+			var delay = float(arr[3]) if arr.size() > 3 else 0.0;
+			var times = arr[4] if arr.size() > 4 else 1;
+
+			if not input or not target: continue;
 
 			caller.connect(output, func(): call_target_input(target, input, param, delay, caller));
 
@@ -215,6 +217,9 @@ func get_mesh(cleanup = true, lods = true) -> ArrayMesh:
 	var mesh = VMFTool.cleanup_mesh(VMFTool.create_mesh(struct, global_position)) \
 			if cleanup \
 			else VMFTool.create_mesh(struct, global_position);
+
+	if not mesh: return null;
+
 	return VMFTool.generate_lods(mesh) if lods else mesh;
 
 ## Converts the vector from Z-up to Y-up
@@ -266,6 +271,8 @@ func get_entity_convex_shape():
 	};
 
 	var mesh = VMFTool.create_mesh(struct, global_position);
+
+	if (not mesh or mesh.get_surface_count() == 0): return;
 	return mesh.create_convex_shape();
 	
 ## Creates optimised trimesh shape of the entity by using CSGCombiner3D
@@ -280,8 +287,11 @@ func get_entity_trimesh_shape():
 	for solid in solids:
 		var struct = { 'world': { 'solid': [solid] } };
 		var csgmesh = CSGMesh3D.new();
+		var mesh = VMFTool.create_mesh(struct, global_position);
 
-		csgmesh.mesh = VMFTool.create_mesh(struct, global_position);
+		if not mesh or mesh.get_surface_count() == 0: continue;
+
+		csgmesh.mesh = mesh;
 		combiner.add_child(csgmesh);
 		
 	combiner._update_shape();

@@ -6,7 +6,7 @@
 transparency = 1
 blend_mode = 1
 albedo_texture = ExtResource("1_uhsni")
-ao_enabled = true
-ao_light_affect = 1.0
-backlight_enabled = true
-backlight = Color(0.23778, 0.23778, 0.23778, 1)
+emission_enabled = true
+emission = Color(0.701991, 0.15307, 0.0407538, 1)
+emission_energy_multiplier = 5.0
+uv1_scale = Vector3(0.25, 0.25, 0.25)

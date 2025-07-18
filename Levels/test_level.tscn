@@ -1,9 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://c28xui7gwdn5"]
+[gd_scene load_steps=14 format=3 uid="uid://c28xui7gwdn5"]
 
+[ext_resource type="Script" uid="uid://bppvp3cpwok03" path="res://Scripts/Levels/level_type.gd" id="1_7e6fp"]
+[ext_resource type="Texture2D" uid="uid://bamm1ye3a1t3r" path="res://Assets/Images/Levels/default.png" id="1_i4ak4"]
+[ext_resource type="AudioStream" uid="uid://cxeiwulo55seh" path="res://Assets/Audio/Music/SurfUp Theme.ogg" id="1_ub4j8"]
+[ext_resource type="Theme" uid="uid://cncr6mw1ul60l" path="res://surfsup.tres" id="2_3158n"]
 [ext_resource type="PackedScene" uid="uid://2ekgf8ai0k3n" path="res://Levels/Utilities/starting_platform.tscn" id="4_7e6fp"]
-[ext_resource type="PackedScene" uid="uid://w3a2mgsbdjes" path="res://Assets/Models/Props/apocalyptic_building.glb" id="4_i4ak4"]
 [ext_resource type="PackedScene" uid="uid://cv0c4qmjbp7mb" path="res://Levels/Ramps/Parts/wedge-both-up-90-1024.glb" id="5_4t6x8"]
 [ext_resource type="PackedScene" uid="uid://ck6wobja822h1" path="res://Levels/Ramps/Parts/thin-both-up-45-2048.glb" id="6_ub4j8"]
+[ext_resource type="PackedScene" uid="uid://d0nfo46b8iqci" path="res://Levels/Utilities/finish_line.tscn" id="7_pvdih"]
+[ext_resource type="PackedScene" uid="uid://cgymwi8dogwyp" path="res://Levels/Utilities/kill_box.tscn" id="9_4t6x8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i4ak4"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -18,14 +23,13 @@ sky = SubResource("Sky_3158n")
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7f4qm"]
-
 [sub_resource type="LabelSettings" id="LabelSettings_jjbe8"]
 font_size = 100
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="TestLevel" type="Node3D"]
+script = ExtResource("1_7e6fp")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
@@ -35,8 +39,10 @@ shadow_enabled = true
 environment = SubResource("Environment_ub4j8")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -25.0
+stream = ExtResource("1_ub4j8")
+volume_db = -15.0
 autoplay = true
+bus = &"Music"
 
 [node name="LoadingScreen" type="Control" parent="."]
 unique_name_in_owner = true
@@ -54,7 +60,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_7f4qm")
+texture = ExtResource("1_i4ak4")
 expand_mode = 5
 
 [node name="Label" type="Label" parent="LoadingScreen"]
@@ -68,7 +74,8 @@ offset_left = -1053.0
 offset_top = -235.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Loading a new map..."
+theme = ExtResource("2_3158n")
+text = "Loading your new map..."
 label_settings = SubResource("LabelSettings_jjbe8")
 horizontal_alignment = 2
 vertical_alignment = 2
@@ -91,7 +98,10 @@ transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, -1, -1
 [node name="ramp" parent="Level/thin-both-up-45-2048" index="0"]
 transform = Transform3D(0.0258816, 0.0965927, -1.01549e-10, -0.0965927, 0.0258816, 7.7134e-10, 7.71341e-10, -1.01546e-10, 0.1, 0, 0, 0)
 
-[node name="apocalyptic_building" parent="Level" instance=ExtResource("4_i4ak4")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 43, -237, -551)
+[node name="FinishLine" parent="Level" instance=ExtResource("7_pvdih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -205, -607)
+
+[node name="KillBox" parent="Level" instance=ExtResource("9_4t6x8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 94, -256, -320)
 
 [editable path="Level/thin-both-up-45-2048"]

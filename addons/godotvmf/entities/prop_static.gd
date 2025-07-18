@@ -6,8 +6,13 @@ extends prop_studio
 func _apply_entity(e):
 	super._apply_entity(e);
 
+	if not model_instance:
+		VMFLogger.error("Corrupted prop_static: " + str(model));
+		return;
+
 	model_instance.set_owner(get_owner());
 	model_instance.scale *= e.get('modelscale', 1.0);
+	MDLMeshGenerator.apply_skin(model_instance, e.get("skin", 0));
 
 	var fade_min = entity.get('fademindist', 0.0) * VMFConfig.import.scale;
 	var fade_max = entity.get('fademaxdist', 0.0) * VMFConfig.import.scale;

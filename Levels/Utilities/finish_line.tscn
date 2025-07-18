@@ -1,20 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0nfo46b8iqci"]
+[gd_scene load_steps=5 format=3 uid="uid://d0nfo46b8iqci"]
 
-[ext_resource type="PackedScene" uid="uid://clwebo4hibym8" path="res://Levels/Utilities/landing_platform.tscn" id="2_nfri4"]
+[ext_resource type="Material" uid="uid://dludgmgrlna4p" path="res://Assets/Models/Props/LandingPlatform/Concrete/Concrete_Mat.tres" id="3_cma6q"]
+[ext_resource type="Material" uid="uid://c7imhl1p6jtbx" path="res://Assets/Models/Props/LandingPlatform/Tile/Tile_Mat.tres" id="4_71f8k"]
+[ext_resource type="PackedScene" uid="uid://w3y1hoq5kans" path="res://Assets/Models/Props/LandingPlatform/LandingPlatform.blend" id="5_cma6q"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_3ltyv"]
-height = 0.1
-radius = 0.18
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cma6q"]
+resource_local_to_scene = true
+albedo_color = Color(0.831373, 1, 0, 1)
+emission = Color(0.831373, 1, 0, 1)
+emission_energy_multiplier = 2.0
+rim_enabled = true
 
 [node name="FinishLine" type="Node3D"]
 
-[node name="LandingPlatform" parent="." instance=ExtResource("2_nfri4")]
+[node name="LandingPlatform2" parent="." instance=ExtResource("5_cma6q")]
 
-[node name="Area3D" type="Area3D" parent="."]
-collision_mask = 2
+[node name="LandingPlatform" parent="LandingPlatform2" index="0"]
+surface_material_override/0 = ExtResource("3_cma6q")
+surface_material_override/1 = ExtResource("4_71f8k")
+surface_material_override/2 = SubResource("StandardMaterial3D_cma6q")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 2.5, 0)
-shape = SubResource("CylinderShape3D_3ltyv")
+[node name="FinishZone" parent="LandingPlatform2" index="2"]
+visible = false
 
-[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[node name="FinishOutline" parent="LandingPlatform2" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_cma6q")
+
+[editable path="LandingPlatform2"]

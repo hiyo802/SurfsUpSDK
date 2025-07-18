@@ -26,7 +26,7 @@ enum MDLFlag {
 }
 
 class MDLHeader:
-	static var scheme:
+	static var scheme: 
 		get: return {
 		id 													= [ByteReader.Type.STRING, 4],
 		version 											= ByteReader.Type.INT,
@@ -189,7 +189,7 @@ class MDLHeader:
 		return ByteReader.get_structure_string("MDLHeader", self);
 
 class MDLTexture:
-	static var scheme:
+	static var scheme: 
 		get: return {
 		name_offset 									= ByteReader.Type.INT,
 		flags 											= ByteReader.Type.INT,
@@ -476,6 +476,7 @@ var file: FileAccess;
 var materials: Array = [];
 var skin_families: Array = [];
 var source_path: String = "";
+var is_static_prop: bool = false;
 
 var model_name:
 	get: return source_path.get_file().split(".")[0];
@@ -536,6 +537,8 @@ func _read_bones():
 		bone.surface_prop = ByteReader.read_string(file, bone.address + bone.surface_prop_index);
 		bone.id = bone_index;
 		bone_index += 1;
+
+		is_static_prop = bone.name == "static_prop";
 
 	bone_controllers = ByteReader.read_array(file, header, "bone_controller_offset", "bone_controller_count", MDLBoneController);
 

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgs1xrfbyuuya"]
+
+[ext_resource type="PackedScene" uid="uid://cq5h5lg1lhhdc" path="res://Assets/Characters/Y-Bot/Y Bot.tscn" id="1_any7p"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebjlt"]
+size = Vector3(0.813, 1.829, 0.813)
+
+[node name="Surfer" type="Node3D"]
+
+[node name="Character" parent="." instance=ExtResource("1_any7p")]
+
+[node name="Collision Hull" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Collision Hull"]
+shape = SubResource("BoxShape3D_ebjlt")
+debug_color = Color(1, 0.454902, 0, 1)

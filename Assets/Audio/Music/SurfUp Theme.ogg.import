@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxeiwulo55seh"
+path="res://.godot/imported/SurfUp Theme.ogg-f79025c1a045685d2f4833192ca01339.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/SurfUp Theme.ogg"
+dest_files=["res://.godot/imported/SurfUp Theme.ogg-f79025c1a045685d2f4833192ca01339.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

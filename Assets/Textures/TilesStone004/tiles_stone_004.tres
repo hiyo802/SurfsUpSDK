@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cok3eqkjvdjdc"]
+
+[ext_resource type="Texture2D" uid="uid://q7hql4bu44hn" path="res://Assets/Textures/TilesStone004/Tiles_Stone_004_basecolor.png" id="1_eanyu"]
+[ext_resource type="Texture2D" uid="uid://daq660shn7771" path="res://Assets/Textures/TilesStone004/Tiles_Stone_004_ambientOcclusion.png" id="2_k6yhw"]
+[ext_resource type="Texture2D" uid="uid://0jiiw41tlgto" path="res://Assets/Textures/TilesStone004/Tiles_Stone_004_height.png" id="3_tssrp"]
+[ext_resource type="Texture2D" uid="uid://c2rdfs4lnpqa3" path="res://Assets/Textures/TilesStone004/Tiles_Stone_004_normal.png" id="4_oo3gy"]
+[ext_resource type="Texture2D" uid="uid://dw11q353e1jt" path="res://Assets/Textures/TilesStone004/Tiles_Stone_004_roughness.png" id="5_mladv"]
+
+[resource]
+albedo_texture = ExtResource("1_eanyu")
+roughness_texture = ExtResource("5_mladv")
+normal_enabled = true
+normal_texture = ExtResource("4_oo3gy")
+ao_enabled = true
+ao_texture = ExtResource("2_k6yhw")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_tssrp")

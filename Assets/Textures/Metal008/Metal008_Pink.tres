@@ -5,8 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dd0ye2ye02tai" path="res://Assets/Textures/Metal008/Metal008_1K-JPG_Roughness.jpg" id="4_b0hbk"]
 
 [resource]
-albedo_color = Color(0.72549, 0.588235, 0.596078, 1)
-metallic = 0.88
+albedo_color = Color(1, 0.810811, 0.821621, 1)
 metallic_texture = ExtResource("2_wwalk")
 roughness_texture = ExtResource("4_b0hbk")
 normal_enabled = true

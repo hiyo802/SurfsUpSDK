@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://cx17fbqrph5"]
+
+[ext_resource type="Texture2D" uid="uid://bo7xahhp07332" path="res://Assets/Textures/RockTextures/rock_01/rock_01.png" id="1_ykaxn"]
+[ext_resource type="Texture2D" uid="uid://i3c7xj2txk60" path="res://Assets/Textures/RockTextures/rock_01/rock_01_height_1.png" id="2_p2y2t"]
+[ext_resource type="Texture2D" uid="uid://bthqcd810lnyd" path="res://Assets/Textures/RockTextures/rock_01/rock_01_norm.png" id="3_hd7hs"]
+[ext_resource type="Texture2D" uid="uid://qbfwj2qxwmrw" path="res://Assets/Textures/RockTextures/rock_01/rock_01_rough.png" id="4_ooulf"]
+
+[resource]
+albedo_texture = ExtResource("1_ykaxn")
+roughness_texture = ExtResource("4_ooulf")
+normal_enabled = true
+normal_texture = ExtResource("3_hd7hs")
+heightmap_enabled = true
+heightmap_texture = ExtResource("2_p2y2t")

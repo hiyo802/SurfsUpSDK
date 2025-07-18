@@ -52,7 +52,7 @@ class VectorSorter:
 	func get_order(v: Vector3) -> float:
 		var normalized: Vector3 = (v - self.center).normalized();
 		return atan2(
-			self.normal.dot(normalized.cross(self.pp)),
+			self.normal.dot(normalized.cross(self.pp)), 
 			self.normal.dot(normalized.cross(self.qp))
 		);
 
@@ -135,7 +135,7 @@ static func get_texture_size(side_material: String) -> Vector2:
 	var material = get_material(side_material) \
 		if not has_cached_value \
 		else texture_sizes_cache[side_material];
-
+	
 	if not material:
 		texture_sizes_cache[side_material] = Vector2(default_texture_size, default_texture_size);
 		return texture_sizes_cache[side_material];
@@ -161,7 +161,7 @@ static func calculate_uv_for_size(side: Dictionary, vertex: Vector3) -> Vector2:
 	var uz: float = side.uaxis.z;
 	var uscale: float = side.uaxis.scale;
 	var ushift: float = side.uaxis.shift * uscale;
-
+	
 	var vx: float = side.vaxis.x;
 	var vy: float = side.vaxis.y;
 	var vz: float = side.vaxis.z;
@@ -185,7 +185,7 @@ static func calculate_uv_for_size(side: Dictionary, vertex: Vector3) -> Vector2:
 
 	var u := (v2.dot(uv) + ushift) / tw / uscale;
 	var v := (v2.dot(vv) + vshift) / th / vscale;
-
+	
 	return Vector2(u, v);
 
 ## Generates collisions from mesh for each surface. It adds ability to use sufraceprop values
@@ -217,13 +217,13 @@ static func generate_collisions(mesh_instance: MeshInstance3D):
 
 		for key in compilekeys:
 			if has_nocollision_extender:
-				if extend_transformer.nocollision.has(key):
+				if extend_transformer.nocollision.has(key): 
 					is_no_collision = true;
 					break;
 
 			if is_no_collision: break;
 
-			if transformer.nocollision.has(key):
+			if transformer.nocollision.has(key): 
 				is_no_collision = true;
 				break;
 
@@ -238,7 +238,7 @@ static func generate_collisions(mesh_instance: MeshInstance3D):
 
 		if compilekeys.size() > 0:
 			array_mesh.set_meta("compile_keys", compilekeys);
-
+	
 	for surface_prop in surface_props.keys():
 		var static_body = StaticBody3D.new();
 		var collision = CollisionShape3D.new();
@@ -279,6 +279,8 @@ static func cleanup_mesh(original_mesh: ArrayMesh):
 
 	var surface_removed = 0;
 	for surface_idx in range(original_mesh.get_surface_count()):
+		# NOTE: Remapping surface material meta to the new index in case previous surface was removed
+		original_mesh.set_meta("surface_material_" + str(surface_idx - surface_removed), original_mesh.get_meta("surface_material_" + str(surface_idx), ""));
 		surface_idx -= surface_removed;
 
 		var material_name = original_mesh.get_meta("surface_material_" + str(surface_idx), "").to_lower();
@@ -383,7 +385,7 @@ static func create_mesh(vmf_structure: Dictionary, _offset: Vector3 = Vector3(0,
 			else:
 				disp_data = VMFDispTool.new(side, side_data.brush);
 				vertices.assign(disp_data.get_vertices());
-
+				
 			if vertices.size() < 3:
 				VMFLogger.error("Side corrupted: " + str(side.id));
 				continue;
@@ -393,14 +395,14 @@ static func create_mesh(vmf_structure: Dictionary, _offset: Vector3 = Vector3(0,
 			if not is_displacement:
 				var normal = side.plane.value.normal;
 				sf.set_normal(Vector3(normal.x, normal.z, -normal.y));
-
+	
 				for v: Vector3 in vertices:
 					var uv: Vector2 = calculate_uv_for_size(side, v);
 					sf.set_uv(uv);
-
+	
 					var vt := Vector3(v.x, v.z, -v.y) * _scale - _offset;
 					var sg := -1 if side.smoothing_groups == 0 else int(side.smoothing_groups);
-
+					
 					sf.set_smooth_group(sg);
 					sf.set_color(Color8(0, 0, 0));
 					sf.add_vertex(vt);
@@ -455,7 +457,7 @@ static func create_mesh(vmf_structure: Dictionary, _offset: Vector3 = Vector3(0,
 
 		var material = get_material(sides[0].side.material);
 		if material: sf.set_material(material);
-
+				
 		sf.optimize_indices_for_cache();
 		sf.generate_normals();
 		sf.commit(mesh);

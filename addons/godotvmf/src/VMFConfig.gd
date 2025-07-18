@@ -44,23 +44,23 @@ class ImportConfig:
 	## If true, the importer will generate lightmap UV2 for the level geometry
 	var generate_lightmap_uv2: bool = true;
 
-	## Texel size for lightmap
+	## Texel size for lightmap 
 	var lightmap_texel_size: float = 0.4;
 
 	## Lightmap texture size
 	var lightmap_size: int = 1024;
 
 	## The path where imported instances be saved
-	var instances_folder: String = "res://vmf/instances";
+	var instances_folder: String = "res://instances";
 
 	## The path from importer will grab entities
-	var entities_folder: String = "res://vmf/entities";
+	var entities_folder: String = "res://entities";
 
 	## The path where imported geometry and collision be saved
-	var geometry_folder: String = "res://vmf/geometry";
+	var geometry_folder: String = "res://geometry";
 
 	## The path where imported materials be saved
-	var steam_materials_folder: String = "res://vmf/steam_audio_materials";
+	var steam_materials_folder: String = "res://steam_audio_materials";
 
 	## A dictionary of entity aliases where key is an entity name and value is a path to the scene
 	var entity_aliases: Dictionary = {}
@@ -71,10 +71,10 @@ class ImportConfig:
 	## If specified, the importer will use this preset for the navigation mesh
 	var navigation_mesh_preset: String = "";
 
-static var gameinfo_path: String = "res://VMF":
+static var gameinfo_path: String = "res://":
 	get:
 		if not gameinfo_path:
-			gameinfo_path = "res://VMF";
+			gameinfo_path = "res://";
 
 		return gameinfo_path;
 

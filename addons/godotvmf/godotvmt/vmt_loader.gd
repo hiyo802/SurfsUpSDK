@@ -4,7 +4,7 @@ class VMTTransformer:
 	func basetexture(material: Material, value: Variant):
 		if "albedo_texture" in material:
 			material.set("albedo_texture", VTFLoader.get_texture(value));
-
+	
 	func basetexture2(material: Material, value: Variant):
 		if "albedo_texture2" in material:
 			material.set("albedo_texture2", VTFLoader.get_texture(value));
@@ -14,7 +14,7 @@ class VMTTransformer:
 			material.set("normal_texture", VTFLoader.get_texture(value));
 		if "normal_enabled" in material:
 			material.normal_enabled = true;
-
+	
 	func bumpmap2(material: Material, value: Variant):
 		if "normal_texture2" in material:
 			material.set("normal_texture2", VTFLoader.get_texture(value));
@@ -39,28 +39,28 @@ class VMTTransformer:
 	func emissionoperator(material: Material, value: Variant):
 		if "emission_operator" in material:
 			material.set("emission_operator", value);
-
+	
 	func roughnesstexture(material: Material, value: Variant):
 		if "roughness_texture" in material:
 			material.set("roughness_texture", VTFLoader.get_texture(value));
-
+	
 	func roughnessfactor(material: Material, value: Variant):
 		if "roughness" in material:
 			material.set("roughness", value);
-
+	
 	func metalnesstexture(material: Material, value: Variant):
 		if "metallic_texture" in material:
 			material.set("metallic_texture", VTFLoader.get_texture(value));
-
+	
 	func ambientocclusiontexture(material: Material, value: Variant):
 		if "ao_texture" in material:
 			material.set("ao_texture", VTFLoader.get_texture(value));
 			material.ao_enabled = true;
-
+	
 	func bumpmapscale(material: Material, value: Variant):
 		if "normal_scale" in material:
 			material.set("normal_scale", value);
-
+	
 	func nocull(material: Material, value: Variant):
 		material.cull_mode = BaseMaterial3D.CULL_DISABLED \
 				if value == 1 else BaseMaterial3D.CULL_BACK;
@@ -79,7 +79,7 @@ class VMTTransformer:
 	func nextpass(material: Material, value: Variant):
 		var shader_material = VMTShaderBasedMaterial.load("res://" + value + ".gdshader");
 		material.next_pass = shader_material;
-
+	
 	func detail(material: Material, value: Variant):
 		return;
 		if "detail_mask" in material:
@@ -122,7 +122,7 @@ static func parse_transform(transform_data: String):
 	transformRegex.compile('^"?center\\s+([0-9-.]+)\\s+([0-9-.]+)\\s+scale\\s+([0-9-.]+)\\s+([0-9-.]+)\\s+rotate\\s+([0-9-.]+)\\s+translate\\s+([0-9-.]+)\\s+([0-9-.]+)"?$')
 
 	var transformParams = transformRegex.search(transform_data);
-
+	
 	var center = Vector2(float(transformParams.get_string(1)), float(transformParams.get_string(2)));
 	var scale = Vector2(float(transformParams.get_string(3)), float(transformParams.get_string(4)));
 	var rotate = float(transformParams.get_string(5));
@@ -140,9 +140,9 @@ static func load(path: String):
 
 	var shader_name = structure.keys()[0];
 	var details = structure[shader_name];
-	var material = null;
+	var material = null; 
 	var is_blend_texture = shader_name == "worldvertextransition";
-
+	
 	# NOTE: CS:GO/L4D
 	if "insert" in details:
 		details.merge(details["insert"]);
@@ -206,8 +206,8 @@ static func get_material(material: String):
 	if not ResourceLoader.exists(material_path):
 		VMFLogger.warn("Material not found: " + material);
 		material_path = VMFConfig.materials.fallback_material
-
-		if not ResourceLoader.exists(material_path): return null;
+	
+		if not material_path or not ResourceLoader.exists(material_path): return null;
 
 	cached_materials = cached_materials if cached_materials else {};
 

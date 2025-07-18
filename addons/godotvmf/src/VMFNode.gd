@@ -48,7 +48,7 @@ var is_runtime = false;
 
 var _structure: Dictionary = {};
 var _owner:
-	get:
+	get: 
 		var o = get_owner();
 		if o == null: return self;
 
@@ -58,7 +58,7 @@ var editor_interface:
 	get: return Engine.get_singleton("EditorInterface");
 
 var geometry: Node3D:
-	get:
+	get: 
 		var node = get_node_or_null("Geometry");
 		node = get_node_or_null(NodePath("NavigationMesh/Geometry")) \
 			if node == null else node;
@@ -97,7 +97,7 @@ func import_geometry(_reimport := false) -> void:
 	var geometry_mesh := MeshInstance3D.new()
 	geometry_mesh.name = "Geometry";
 	geometry_mesh.set_display_folded(true);
-
+	
 	add_child(geometry_mesh);
 	geometry_mesh.set_owner(_owner);
 
@@ -108,15 +108,14 @@ func import_geometry(_reimport := false) -> void:
 
 	VMFTool.generate_collisions(geometry_mesh);
 	save_collision_file();
-	# generate_occluder(true);
 
 	if not get_meta("instance", false):
 		generate_navmesh(geometry_mesh);
 
 	geometry_mesh.mesh = VMFTool.cleanup_mesh(geometry_mesh.mesh);
 
-	# if VMFConfig.import.generate_lightmap_uv2 and not is_runtime:
-	# 	geometry_mesh.mesh.lightmap_unwrap(geometry_mesh.global_transform, texel_size);
+	if VMFConfig.import.generate_lightmap_uv2 and not is_runtime:
+		geometry_mesh.mesh.lightmap_unwrap(geometry_mesh.global_transform, texel_size);
 
 	geometry_mesh.mesh = save_geometry_file(geometry_mesh.mesh);
 
@@ -143,15 +142,15 @@ func generate_navmesh(geometry_mesh: MeshInstance3D):
 func save_geometry_file(target_mesh: Mesh):
 	if not save_geometry: return target_mesh;
 	var resource_path: String = "%s/%s_import.mesh" % [VMFConfig.import.geometry_folder, _vmf_identifer()];
-
+	
 	if not DirAccess.dir_exists_absolute(resource_path.get_base_dir()):
 		DirAccess.make_dir_recursive_absolute(resource_path.get_base_dir());
-
+	
 	var err := ResourceSaver.save(target_mesh, resource_path, ResourceSaver.FLAG_COMPRESS);
 	if err:
-		VMFLogger.error("Failed to save resource: %s" % err);
+		VMFLogger.error("Failed to save geometry resource: %s" % err);
 		return;
-
+	
 	target_mesh.take_over_path(resource_path);
 	return target_mesh;
 
@@ -164,10 +163,14 @@ func save_collision_file() -> void:
 		var collision := body.get_node('collision');
 		var shape = collision.shape;
 		var save_path := "%s/%s_collision_%s.res" % [VMFConfig.import.geometry_folder, _vmf_identifer(), body.name];
+
+		if not DirAccess.dir_exists_absolute(save_path.get_base_dir()):
+			DirAccess.make_dir_recursive_absolute(save_path.get_base_dir());
+
 		var error := ResourceSaver.save(collision.shape, save_path, ResourceSaver.FLAG_COMPRESS);
 
 		if error:
-			VMFLogger.error("Failed to save resource: %s" % error);
+			VMFLogger.error("Failed to save collision resource: %s" % error);
 			continue;
 		shape.take_over_path(save_path);
 		collision.shape = load(save_path);
@@ -199,7 +202,6 @@ func import_models():
 		if not FileAccess.file_exists(vtx_path): vtx_path = vtx_dx90_path;
 		if not FileAccess.file_exists(vtx_path): continue;
 		if not FileAccess.file_exists(vvd_path): continue;
-		if not FileAccess.file_exists(phy_path): continue;
 
 		var model_materials = MDLReader.new(mdl_path).get_possible_material_paths();
 
@@ -210,7 +212,7 @@ func import_models():
 		DirAccess.make_dir_recursive_absolute(target_path.get_base_dir());
 		DirAccess.copy_absolute(vtx_path, target_path + '.dx90.vtx');
 		DirAccess.copy_absolute(vvd_path, target_path + ".vvd");
-		DirAccess.copy_absolute(phy_path, target_path + ".phy");
+		if FileAccess.file_exists(phy_path): DirAccess.copy_absolute(phy_path, target_path + ".phy");
 		DirAccess.copy_absolute(mdl_path, target_path + ".mdl");
 
 		has_imported_resources = true;
@@ -223,7 +225,7 @@ func import_materials() -> void:
 	var list: Array[String] = [];
 	var ignore_list: Array[String];
 	ignore_list.assign(VMFConfig.materials.ignore);
-
+	
 	var elapsed_time := Time.get_ticks_msec();
 
 	if "solid" in _structure.world:
@@ -284,7 +286,7 @@ func import_textures(material: String):
 	material = material.to_lower();
 
 	var target_path = VMFUtils.normalize_path(VMFConfig.gameinfo_path + "/materials/" + material + ".vmt");
-	if not FileAccess.file_exists(target_path):
+	if not FileAccess.file_exists(target_path): 
 		VMFLogger.error("Material not found: " + target_path);
 		return;
 
@@ -305,7 +307,7 @@ func import_textures(material: String):
 		DirAccess.make_dir_recursive_absolute(target_vtf_path.get_base_dir());
 		var has_error = DirAccess.copy_absolute(vtf_path, target_vtf_path);
 
-		if not has_error:
+		if not has_error: 
 			has_imported_resources = true;
 			continue;
 		VMFLogger.error("Failed to copy texture: " + str(has_error));
@@ -359,7 +361,7 @@ func push_entity_to_group(classname: String, target_node: Node):
 		entities.add_child(group);
 		group.set_owner(_owner);
 		group.set_display_folded(true);
-
+	
 	group.add_child(target_node);
 	target_node.set_owner(_owner);
 	target_node.set_display_folded(true);
@@ -465,7 +467,7 @@ func for_resource_import():
 	var fs = editor_interface.get_resource_filesystem() if Engine.is_editor_hint() else null;
 	if not has_imported_resources: return;
 
-	if fs:
+	if fs: 
 		fs.scan();
 		await fs.resources_reimported;
 
