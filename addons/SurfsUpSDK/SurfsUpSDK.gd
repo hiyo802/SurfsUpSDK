@@ -86,7 +86,8 @@ func _get_all_dependencies_recursive(resource_path: String, visited: Dictionary 
 					var prop_value = scene_state.get_node_property_value(i, j)
 					_scan_resource_for_dependencies(prop_value, all_deps, visited)
 
-	elif resource_path.ends_with(".glb") or resource_path.ends_with(".gltf"):
+	elif resource_path.ends_with(".glb") or resource_path.ends_with(".gltf") or resource_path.ends_with(".fbx") \
+	or resource_path.ends_with(".obj") or resource_path.ends_with(".mtl"):
 		# GLB files are imported resources, we need to include both the source and imported files
 		if FileAccess.file_exists(resource_path):
 			# Include the .import file

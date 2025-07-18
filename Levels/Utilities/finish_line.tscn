@@ -21,7 +21,7 @@ surface_material_override/1 = ExtResource("4_71f8k")
 surface_material_override/2 = SubResource("StandardMaterial3D_cma6q")
 
 [node name="FinishZone" parent="LandingPlatform2" index="2"]
-visible = false
+collision_mask = 2
 
 [node name="FinishOutline" parent="LandingPlatform2" index="3"]
 surface_material_override/0 = SubResource("StandardMaterial3D_cma6q")

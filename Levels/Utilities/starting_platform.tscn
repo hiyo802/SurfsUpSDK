@@ -15,7 +15,8 @@ surface_material_override/2 = ExtResource("3_14pmk")
 [node name="Collision " parent="." index="1" groups=["starting_platform"]]
 
 [node name="StartZone" parent="." index="2"]
-visible = false
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+collision_mask = 2
 
 [node name="StartOutline" parent="." index="3"]
 surface_material_override/0 = ExtResource("3_14pmk")
