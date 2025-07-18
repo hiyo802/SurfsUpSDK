@@ -16,6 +16,10 @@ config/quit_on_go_back=false
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="uid://ysqanrf6aw6x"
 
+[debug]
+
+gdscript/warnings/untyped_declaration=1
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/SurfsUpSDK/plugin.cfg", "res://addons/godotfgd/plugin.cfg", "res://addons/godotvmf/plugin.cfg", "res://addons/godotvmtsync/plugin.cfg")
