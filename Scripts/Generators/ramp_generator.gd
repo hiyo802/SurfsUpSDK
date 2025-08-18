@@ -467,14 +467,14 @@ func _update_live_mirror() -> void:
 	_copy_state_to_live_mirror(live)
 	_set_mirrored_position_only(live)
 
-func _get_live_mirror_node() -> RampTool3:
+func _get_live_mirror_node() -> RampGenerator:
 	if not get_parent(): return null
-	return get_parent().get_node_or_null(name + "_LiveMirror3") as RampTool3
+	return get_parent().get_node_or_null(name + "_LiveMirror3") as RampGenerator
 
-func _ensure_live_mirror() -> RampTool3:
+func _ensure_live_mirror() -> RampGenerator:
 	var live := _get_live_mirror_node()
 	if not live:
-		live = RampTool3.new()
+		live = RampGenerator.new()
 		live.name = name + "_LiveMirror3"
 		if get_parent():
 			get_parent().add_child(live)
@@ -482,7 +482,7 @@ func _ensure_live_mirror() -> RampTool3:
 				live.owner = owner
 	return live
 
-func _copy_state_to_live_mirror(live: RampTool3) -> void:
+func _copy_state_to_live_mirror(live: RampGenerator) -> void:
 	live.ramp_direction = _ramp_direction
 	live.triangle_angle = _triangle_angle
 	live.triangle_height = _triangle_height
