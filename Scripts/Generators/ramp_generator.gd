@@ -38,8 +38,8 @@ func _get_property_list() -> Array:
 	properties.append({"name": "Ramp Settings", "type": TYPE_NIL, "usage": PROPERTY_USAGE_CATEGORY})
 	properties.append({"name": "ramp_direction", "type": TYPE_INT, "hint": PROPERTY_HINT_ENUM, "hint_string": "CENTER,LEFT,RIGHT", "usage": PROPERTY_USAGE_DEFAULT})
 	properties.append({"name": "triangle_angle", "type": TYPE_FLOAT, "hint": PROPERTY_HINT_RANGE, "hint_string": "45.573,89.0,0.1", "usage": PROPERTY_USAGE_DEFAULT})
-	properties.append({"name": "triangle_height", "type": TYPE_FLOAT, "usage": PROPERTY_USAGE_DEFAULT})
-	properties.append({"name": "triangle_base", "type": TYPE_FLOAT, "usage": PROPERTY_USAGE_DEFAULT})
+	properties.append({"name": "triangle_height", "type": TYPE_FLOAT, "hint": PROPERTY_HINT_RANGE, "hint_string": "4.0,89.0,0.1", "usage": PROPERTY_USAGE_DEFAULT})
+	properties.append({"name": "triangle_base", "type": TYPE_FLOAT, "hint": PROPERTY_HINT_RANGE, "hint_string": "4.1,89.0,0.1", "usage": PROPERTY_USAGE_DEFAULT})
 	properties.append({"name": "ramp_material", "type": TYPE_OBJECT, "hint": PROPERTY_HINT_RESOURCE_TYPE, "hint_string": "Material", "usage": PROPERTY_USAGE_DEFAULT})
 
 	# Path Settings
